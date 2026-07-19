@@ -1,15 +1,7 @@
 🎧 YaMusicToTelegram
 
-Автопостинг текущего трека из Яндекс.Музыки в Telegram-канал
+Автопостинг текущего трека из Яндекс.Музыки в Telegram-канал: обложка, прогресс-бар, статус паузы — без Python и сторонних пакетов, только PowerShell.
 
-Обложка • Прогресс-бар • Статус паузы • Без Python и сторонних пакетов
-
-Show Image
-Show Image
-Show Image
-Show Image
-
-</div>
 
 📖 Содержание
 
@@ -146,60 +138,60 @@ $TelegramChatId   = $env:YAMUSIC_CHAT_ID
 
 ⚡ Как это работает
 
-#mermaid-r1fs-r1 { font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16px; fill: rgb(229, 229, 229); }
-#mermaid-r1fs-r1 .edge-animation-slow { stroke-dashoffset: 900; animation: 50s linear 0s infinite normal none running dash; stroke-linecap: round; stroke-dasharray: 9, 5 !important; }
-#mermaid-r1fs-r1 .edge-animation-fast { stroke-dashoffset: 900; animation: 20s linear 0s infinite normal none running dash; stroke-linecap: round; stroke-dasharray: 9, 5 !important; }
-#mermaid-r1fs-r1 .error-icon { fill: rgb(204, 120, 92); }
-#mermaid-r1fs-r1 .error-text { fill: rgb(51, 135, 163); stroke: rgb(51, 135, 163); }
-#mermaid-r1fs-r1 .edge-thickness-normal { stroke-width: 1px; }
-#mermaid-r1fs-r1 .edge-thickness-thick { stroke-width: 3.5px; }
-#mermaid-r1fs-r1 .edge-pattern-solid { stroke-dasharray: 0; }
-#mermaid-r1fs-r1 .edge-thickness-invisible { stroke-width: 0; fill: none; }
-#mermaid-r1fs-r1 .edge-pattern-dashed { stroke-dasharray: 3; }
-#mermaid-r1fs-r1 .edge-pattern-dotted { stroke-dasharray: 2; }
-#mermaid-r1fs-r1 .marker { fill: rgb(161, 161, 161); stroke: rgb(161, 161, 161); }
-#mermaid-r1fs-r1 .marker.cross { stroke: rgb(161, 161, 161); }
-#mermaid-r1fs-r1 svg { font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16px; }
-#mermaid-r1fs-r1 p { margin: 0px; }
-#mermaid-r1fs-r1 .label { font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: rgb(229, 229, 229); }
-#mermaid-r1fs-r1 .cluster-label text { fill: rgb(51, 135, 163); }
-#mermaid-r1fs-r1 .cluster-label span { color: rgb(51, 135, 163); }
-#mermaid-r1fs-r1 .cluster-label span p { background-color: transparent; }
-#mermaid-r1fs-r1 .label text, #mermaid-r1fs-r1 span { fill: rgb(229, 229, 229); color: rgb(229, 229, 229); }
-#mermaid-r1fs-r1 .node rect, #mermaid-r1fs-r1 .node circle, #mermaid-r1fs-r1 .node ellipse, #mermaid-r1fs-r1 .node polygon, #mermaid-r1fs-r1 .node path { fill: transparent; stroke: rgb(161, 161, 161); stroke-width: 1px; }
-#mermaid-r1fs-r1 .rough-node .label text, #mermaid-r1fs-r1 .node .label text, #mermaid-r1fs-r1 .image-shape .label, #mermaid-r1fs-r1 .icon-shape .label { text-anchor: middle; }
-#mermaid-r1fs-r1 .node .katex path { fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 1px; }
-#mermaid-r1fs-r1 .rough-node .label, #mermaid-r1fs-r1 .node .label, #mermaid-r1fs-r1 .image-shape .label, #mermaid-r1fs-r1 .icon-shape .label { text-align: center; }
-#mermaid-r1fs-r1 .node.clickable { cursor: pointer; }
-#mermaid-r1fs-r1 .root .anchor path { stroke-width: 0; stroke: rgb(161, 161, 161); fill: rgb(161, 161, 161) !important; }
-#mermaid-r1fs-r1 .arrowheadPath { fill: rgb(11, 11, 11); }
-#mermaid-r1fs-r1 .edgePath .path { stroke: rgb(161, 161, 161); stroke-width: 1px; }
-#mermaid-r1fs-r1 .flowchart-link { stroke: rgb(161, 161, 161); fill: none; }
-#mermaid-r1fs-r1 .edgeLabel { background-color: transparent; text-align: center; }
-#mermaid-r1fs-r1 .edgeLabel p { background-color: transparent; }
-#mermaid-r1fs-r1 .edgeLabel rect { opacity: 0.5; background-color: transparent; fill: transparent; }
-#mermaid-r1fs-r1 .labelBkg { background-color: rgba(0, 0, 0, 0.5); }
-#mermaid-r1fs-r1 .cluster rect { fill: rgb(204, 120, 92); stroke: rgb(138, 115, 107); stroke-width: 1px; }
-#mermaid-r1fs-r1 .cluster text { fill: rgb(51, 135, 163); }
-#mermaid-r1fs-r1 .cluster span { color: rgb(51, 135, 163); }
-#mermaid-r1fs-r1 div.mermaidTooltip { position: absolute; text-align: center; max-width: 200px; padding: 2px; font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; background: rgb(204, 120, 92); border: 1px solid rgb(138, 115, 107); border-radius: 2px; pointer-events: none; z-index: 100; }
-#mermaid-r1fs-r1 .flowchartTitleText { text-anchor: middle; font-size: 18px; fill: rgb(229, 229, 229); }
-#mermaid-r1fs-r1 rect.text { fill: none; stroke-width: 0; }
-#mermaid-r1fs-r1 .icon-shape, #mermaid-r1fs-r1 .image-shape { background-color: transparent; text-align: center; }
-#mermaid-r1fs-r1 .icon-shape p, #mermaid-r1fs-r1 .image-shape p { background-color: transparent; padding: 2px; }
-#mermaid-r1fs-r1 .icon-shape .label rect, #mermaid-r1fs-r1 .image-shape .label rect { opacity: 0.5; background-color: transparent; fill: transparent; }
-#mermaid-r1fs-r1 .label-icon { display: inline-block; height: 1em; overflow: visible; vertical-align: -0.125em; }
-#mermaid-r1fs-r1 .node .label-icon path { fill: currentcolor; stroke: revert; stroke-width: revert; }
-#mermaid-r1fs-r1 .node .neo-node { stroke: rgb(161, 161, 161); }
-#mermaid-r1fs-r1 [data-look="neo"].node rect, #mermaid-r1fs-r1 [data-look="neo"].cluster rect, #mermaid-r1fs-r1 [data-look="neo"].node polygon { stroke: url("#mermaid-r1fs-r1-gradient"); filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
-#mermaid-r1fs-r1 [data-look="neo"].node path { stroke: url("#mermaid-r1fs-r1-gradient"); stroke-width: 1px; }
-#mermaid-r1fs-r1 [data-look="neo"].node .outer-path { filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
-#mermaid-r1fs-r1 [data-look="neo"].node .neo-line path { stroke: rgb(161, 161, 161); filter: none; }
-#mermaid-r1fs-r1 [data-look="neo"].node circle { stroke: url("#mermaid-r1fs-r1-gradient"); filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
-#mermaid-r1fs-r1 [data-look="neo"].node circle .state-start { fill: rgb(0, 0, 0); }
-#mermaid-r1fs-r1 [data-look="neo"].icon-shape .icon { fill: url("#mermaid-r1fs-r1-gradient"); filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
-#mermaid-r1fs-r1 [data-look="neo"].icon-shape .icon-neo path { stroke: url("#mermaid-r1fs-r1-gradient"); filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
-#mermaid-r1fs-r1 :root { --mermaid-font-family: "Anthropic Sans",system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }PlayingPausedНет сессииОпрос сессии Windows разв 1 секСтатус?Обложка изЯндекс.Музыки+ прогресс-барКартинка паузыpause_cover.pngКартинка простояpause_cover.pngПубликация / правкапоста в TelegramЗапись события вtrack_events.log
+#mermaid-r1je-r2 { font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16px; fill: rgb(229, 229, 229); }
+#mermaid-r1je-r2 .edge-animation-slow { stroke-dashoffset: 900; animation: 50s linear 0s infinite normal none running dash; stroke-linecap: round; stroke-dasharray: 9, 5 !important; }
+#mermaid-r1je-r2 .edge-animation-fast { stroke-dashoffset: 900; animation: 20s linear 0s infinite normal none running dash; stroke-linecap: round; stroke-dasharray: 9, 5 !important; }
+#mermaid-r1je-r2 .error-icon { fill: rgb(204, 120, 92); }
+#mermaid-r1je-r2 .error-text { fill: rgb(51, 135, 163); stroke: rgb(51, 135, 163); }
+#mermaid-r1je-r2 .edge-thickness-normal { stroke-width: 1px; }
+#mermaid-r1je-r2 .edge-thickness-thick { stroke-width: 3.5px; }
+#mermaid-r1je-r2 .edge-pattern-solid { stroke-dasharray: 0; }
+#mermaid-r1je-r2 .edge-thickness-invisible { stroke-width: 0; fill: none; }
+#mermaid-r1je-r2 .edge-pattern-dashed { stroke-dasharray: 3; }
+#mermaid-r1je-r2 .edge-pattern-dotted { stroke-dasharray: 2; }
+#mermaid-r1je-r2 .marker { fill: rgb(161, 161, 161); stroke: rgb(161, 161, 161); }
+#mermaid-r1je-r2 .marker.cross { stroke: rgb(161, 161, 161); }
+#mermaid-r1je-r2 svg { font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16px; }
+#mermaid-r1je-r2 p { margin: 0px; }
+#mermaid-r1je-r2 .label { font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: rgb(229, 229, 229); }
+#mermaid-r1je-r2 .cluster-label text { fill: rgb(51, 135, 163); }
+#mermaid-r1je-r2 .cluster-label span { color: rgb(51, 135, 163); }
+#mermaid-r1je-r2 .cluster-label span p { background-color: transparent; }
+#mermaid-r1je-r2 .label text, #mermaid-r1je-r2 span { fill: rgb(229, 229, 229); color: rgb(229, 229, 229); }
+#mermaid-r1je-r2 .node rect, #mermaid-r1je-r2 .node circle, #mermaid-r1je-r2 .node ellipse, #mermaid-r1je-r2 .node polygon, #mermaid-r1je-r2 .node path { fill: transparent; stroke: rgb(161, 161, 161); stroke-width: 1px; }
+#mermaid-r1je-r2 .rough-node .label text, #mermaid-r1je-r2 .node .label text, #mermaid-r1je-r2 .image-shape .label, #mermaid-r1je-r2 .icon-shape .label { text-anchor: middle; }
+#mermaid-r1je-r2 .node .katex path { fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 1px; }
+#mermaid-r1je-r2 .rough-node .label, #mermaid-r1je-r2 .node .label, #mermaid-r1je-r2 .image-shape .label, #mermaid-r1je-r2 .icon-shape .label { text-align: center; }
+#mermaid-r1je-r2 .node.clickable { cursor: pointer; }
+#mermaid-r1je-r2 .root .anchor path { stroke-width: 0; stroke: rgb(161, 161, 161); fill: rgb(161, 161, 161) !important; }
+#mermaid-r1je-r2 .arrowheadPath { fill: rgb(11, 11, 11); }
+#mermaid-r1je-r2 .edgePath .path { stroke: rgb(161, 161, 161); stroke-width: 1px; }
+#mermaid-r1je-r2 .flowchart-link { stroke: rgb(161, 161, 161); fill: none; }
+#mermaid-r1je-r2 .edgeLabel { background-color: transparent; text-align: center; }
+#mermaid-r1je-r2 .edgeLabel p { background-color: transparent; }
+#mermaid-r1je-r2 .edgeLabel rect { opacity: 0.5; background-color: transparent; fill: transparent; }
+#mermaid-r1je-r2 .labelBkg { background-color: rgba(0, 0, 0, 0.5); }
+#mermaid-r1je-r2 .cluster rect { fill: rgb(204, 120, 92); stroke: rgb(138, 115, 107); stroke-width: 1px; }
+#mermaid-r1je-r2 .cluster text { fill: rgb(51, 135, 163); }
+#mermaid-r1je-r2 .cluster span { color: rgb(51, 135, 163); }
+#mermaid-r1je-r2 div.mermaidTooltip { position: absolute; text-align: center; max-width: 200px; padding: 2px; font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; background: rgb(204, 120, 92); border: 1px solid rgb(138, 115, 107); border-radius: 2px; pointer-events: none; z-index: 100; }
+#mermaid-r1je-r2 .flowchartTitleText { text-anchor: middle; font-size: 18px; fill: rgb(229, 229, 229); }
+#mermaid-r1je-r2 rect.text { fill: none; stroke-width: 0; }
+#mermaid-r1je-r2 .icon-shape, #mermaid-r1je-r2 .image-shape { background-color: transparent; text-align: center; }
+#mermaid-r1je-r2 .icon-shape p, #mermaid-r1je-r2 .image-shape p { background-color: transparent; padding: 2px; }
+#mermaid-r1je-r2 .icon-shape .label rect, #mermaid-r1je-r2 .image-shape .label rect { opacity: 0.5; background-color: transparent; fill: transparent; }
+#mermaid-r1je-r2 .label-icon { display: inline-block; height: 1em; overflow: visible; vertical-align: -0.125em; }
+#mermaid-r1je-r2 .node .label-icon path { fill: currentcolor; stroke: revert; stroke-width: revert; }
+#mermaid-r1je-r2 .node .neo-node { stroke: rgb(161, 161, 161); }
+#mermaid-r1je-r2 [data-look="neo"].node rect, #mermaid-r1je-r2 [data-look="neo"].cluster rect, #mermaid-r1je-r2 [data-look="neo"].node polygon { stroke: url("#mermaid-r1je-r2-gradient"); filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
+#mermaid-r1je-r2 [data-look="neo"].node path { stroke: url("#mermaid-r1je-r2-gradient"); stroke-width: 1px; }
+#mermaid-r1je-r2 [data-look="neo"].node .outer-path { filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
+#mermaid-r1je-r2 [data-look="neo"].node .neo-line path { stroke: rgb(161, 161, 161); filter: none; }
+#mermaid-r1je-r2 [data-look="neo"].node circle { stroke: url("#mermaid-r1je-r2-gradient"); filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
+#mermaid-r1je-r2 [data-look="neo"].node circle .state-start { fill: rgb(0, 0, 0); }
+#mermaid-r1je-r2 [data-look="neo"].icon-shape .icon { fill: url("#mermaid-r1je-r2-gradient"); filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
+#mermaid-r1je-r2 [data-look="neo"].icon-shape .icon-neo path { stroke: url("#mermaid-r1je-r2-gradient"); filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
+#mermaid-r1je-r2 :root { --mermaid-font-family: "Anthropic Sans",system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }PlayingPausedНет сессииОпрос сессии Windows разв 1 секСтатус?Обложка изЯндекс.Музыки+ прогресс-барКартинка паузыpause_cover.pngКартинка простояpause_cover.pngПубликация / правкапоста в TelegramЗапись события вtrack_events.log
 
 
 Раз в секунду скрипт спрашивает Windows, какой трек активен в сессии, подходящей под $AppNameFilter.
@@ -236,6 +228,4 @@ Windows видит медиа-сессию, но её SourceAppUserModelId не 
 MIT — используйте, меняйте, распространяйте свободно.
 
 
-<div align="center">
 Сделано для тех, кто хочет делиться музыкой из Яндекс.Музыки в Telegram ✨
-</div>
